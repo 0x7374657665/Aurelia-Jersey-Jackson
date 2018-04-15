@@ -68,7 +68,9 @@
     "elements": "resources/elements",
     "attributes": "resources/attributes",
     "valueConverters": "resources/value-converters",
-    "bindingBehaviors": "resources/binding-behaviors"
+    "bindingBehaviors": "resources/binding-behaviors",
+    "backend": "../backend/src/main/webapp",
+    "dist": "dist/**/*"
   },
   "testFramework": {
     "id": "jasmine",

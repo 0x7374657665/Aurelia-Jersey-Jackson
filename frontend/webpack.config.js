@@ -23,7 +23,7 @@ const cssRules = [
   { loader: 'css-loader' },
 ];
 
-module.exports = ({production, server, extractCss, coverage, analyze} = {}) => ({
+module.exports = ({production, server, extractCss, coverage, analyze, contextPath} = {}) => ({
   resolve: {
     extensions: ['.js'],
     modules: [srcDir, 'node_modules'],
@@ -35,7 +35,7 @@ module.exports = ({production, server, extractCss, coverage, analyze} = {}) => (
   mode: production ? 'production' : 'development',
   output: {
     path: outDir,
-    publicPath: baseUrl,
+    publicPath: contextPath + baseUrl,
     filename: production ? '[name].[chunkhash].bundle.js' : '[name].[hash].bundle.js',
     sourceMapFilename: production ? '[name].[chunkhash].bundle.map' : '[name].[hash].bundle.map',
     chunkFilename: production ? '[name].[chunkhash].chunk.js' : '[name].[hash].chunk.js'
