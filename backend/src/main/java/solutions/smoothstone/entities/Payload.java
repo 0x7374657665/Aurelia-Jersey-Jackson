@@ -5,7 +5,11 @@ import solutions.smoothstone.entities.UserAccessRecord;
 import java.util.List;
 
 public class Payload {
+    String applicationInstance;
+    List<UserAccessRecord> data;
+
     public Payload() {}
+
     public String getApplicationInstance() {
         return applicationInstance;
     }
@@ -22,6 +26,4 @@ public class Payload {
         this.data = data;
     }
 
-    String applicationInstance;
-    List<UserAccessRecord> data;
 }

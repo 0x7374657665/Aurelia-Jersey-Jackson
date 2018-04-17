@@ -34,6 +34,7 @@ public class MyResource {
     }
 
     private class Message {
+        public Message() {}
         public Message(String message, int luckyNum) {
             this.message = message;
             this.luckyNum = luckyNum;
@@ -47,7 +48,7 @@ public class MyResource {
             return luckyNum;
         }
 
-        final String message;
-        final int luckyNum;
+        private String message;
+        private int luckyNum;
     }
 }
